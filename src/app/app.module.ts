@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import {RouterModule} from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     AboutComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { FooterComponent } from './footer/footer.component';
     RouterModule.forRoot([
       {path: "about",component:AboutComponent},
       {path: "home",component:HomeComponent},
-      {path:"footer",component:FooterComponent}
+      {path:"footer",component:FooterComponent},
+      {path:"contact",component:ContactComponent}
     ])
   ],
   providers: [],
