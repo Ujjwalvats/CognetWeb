@@ -1,37 +1,58 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, Component } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCardModule, MatButtonModule} from '@angular/material'
+import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
-import {RouterModule} from '@angular/router';
+import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { NewsComponent } from './news/news.component';
+import { OffersComponent } from './offers/offers.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import{BirthdaycakesComponent} from './birthdaycakes/birthdaycakes.component';
+import{SportscakesComponent } from './sportscakes/sportscakes.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    AboutComponent,
     HomeComponent,
+    HeaderComponent,
     FooterComponent,
-    ContactComponent
+    AboutComponent,
+    NewsComponent,
+    OffersComponent,
+    ContactComponent,
+    LoginComponent,
+    SignupComponent,
+    BirthdaycakesComponent,
+    SportscakesComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    FormsModule, ReactiveFormsModule,
-    MatCardModule, MatButtonModule,
-    RouterModule.forRoot([
-      {path: "about",component:AboutComponent},
-      {path: "home",component:HomeComponent},
-      {path:"footer",component:FooterComponent},
-      {path:"contact",component:ContactComponent}
-    ])
+    FormsModule,
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

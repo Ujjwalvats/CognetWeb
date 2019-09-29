@@ -33,6 +33,6 @@ export class ContactComponent implements OnInit {
           return;
       }
 
-      alert('SUCCESS!! :-)')
+      alert('SUCCESS!! :-)');
   }
 }
