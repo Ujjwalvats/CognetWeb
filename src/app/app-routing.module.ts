@@ -11,6 +11,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import{BirthdaycakesComponent} from './birthdaycakes/birthdaycakes.component';
 import {SportscakesComponent } from './sportscakes/sportscakes.component';
+import {GymcakesComponent} from './sportscakes/gymcakes/gymcakes.component';
+import { FootballcakesComponent } from './sportscakes/footballcakes/footballcakes.component';
 
 
 const routes: Routes = [
@@ -24,7 +26,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: SignupComponent},
   {path: 'birthdaycakes',component:BirthdaycakesComponent},
-  {path: 'sportscakes',component:SportscakesComponent}
+  {path: 'sportscakes',component:SportscakesComponent},
+  {path: 'sportscakes/gymcakes', component:GymcakesComponent},
+  {path: 'sportscakes/footballcakes',component:FootballcakesComponent}
 ];
 
 @NgModule({

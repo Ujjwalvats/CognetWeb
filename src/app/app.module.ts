@@ -24,6 +24,10 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import{BirthdaycakesComponent} from './birthdaycakes/birthdaycakes.component';
 import{SportscakesComponent } from './sportscakes/sportscakes.component';
+import {GymcakesComponent} from './sportscakes/gymcakes/gymcakes.component';
+import { FootballcakesComponent } from './sportscakes/footballcakes/footballcakes.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +41,9 @@ import{SportscakesComponent } from './sportscakes/sportscakes.component';
     LoginComponent,
     SignupComponent,
     BirthdaycakesComponent,
-    SportscakesComponent
+    SportscakesComponent,
+    GymcakesComponent,
+    FootballcakesComponent
   ],
   imports: [
     BrowserModule,
