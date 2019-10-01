@@ -7,12 +7,15 @@ import { FooterComponent } from './footer/footer.component';
 import { NewsComponent } from './news/news.component';
 import { OffersComponent } from './offers/offers.component';
 import { ContactComponent } from './contact/contact.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import{BirthdaycakesComponent} from './birthdaycakes/birthdaycakes.component';
-import {SportscakesComponent } from './sportscakes/sportscakes.component';
-import {GymcakesComponent} from './sportscakes/gymcakes/gymcakes.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { BirthdaycakesComponent } from './birthdaycakes/birthdaycakes.component';
+import { SportscakesComponent } from './sportscakes/sportscakes.component';
+import { OurcakesComponent } from './ourcakes/ourcakes.component';
+import { SpecialcakesComponent } from './specialcakes/specialcakes.component';
 import { FootballcakesComponent } from './sportscakes/footballcakes/footballcakes.component';
+import { GymcakesComponent } from './sportscakes/gymcakes/gymcakes.component';
+import {BabyshowerComponent } from './ourcakes/babyshower/babyshower.component';
 
 
 const routes: Routes = [
@@ -25,10 +28,13 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: SignupComponent},
-  {path: 'birthdaycakes',component:BirthdaycakesComponent},
-  {path: 'sportscakes',component:SportscakesComponent},
-  {path: 'sportscakes/gymcakes', component:GymcakesComponent},
-  {path: 'sportscakes/footballcakes',component:FootballcakesComponent}
+  {path: 'birthdaycakes', component: BirthdaycakesComponent},
+  {path: 'sportscakes', component: SportscakesComponent},
+  {path: 'ourcakes', component: OurcakesComponent},
+  {path: 'specialcakes', component: SpecialcakesComponent},
+  {path: 'sportscakes/gymcakes', component: GymcakesComponent},
+  {path: 'sportscakes/footballcakes', component: FootballcakesComponent},
+  {path: 'ourcakes/babyshower', component: BabyshowerComponent}
 ];
 
 @NgModule({

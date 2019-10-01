@@ -4,7 +4,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatToolbarModule,
         MatButtonModule,
         MatSidenavModule,
-        MatIconModule,
         MatListModule,
         MatCardModule,
         MatFormFieldModule,
@@ -20,13 +19,16 @@ import { AboutComponent } from './about/about.component';
 import { NewsComponent } from './news/news.component';
 import { OffersComponent } from './offers/offers.component';
 import { ContactComponent } from './contact/contact.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import{BirthdaycakesComponent} from './birthdaycakes/birthdaycakes.component';
-import{SportscakesComponent } from './sportscakes/sportscakes.component';
-import {GymcakesComponent} from './sportscakes/gymcakes/gymcakes.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { BirthdaycakesComponent } from './birthdaycakes/birthdaycakes.component';
+import { SportscakesComponent } from './sportscakes/sportscakes.component';
+import { OurcakesComponent } from './ourcakes/ourcakes.component';
+import { SpecialcakesComponent } from './specialcakes/specialcakes.component';
+import { GymcakesComponent } from './sportscakes/gymcakes/gymcakes.component';
 import { FootballcakesComponent } from './sportscakes/footballcakes/footballcakes.component';
-
+import {BabyshowerComponent } from './ourcakes/babyshower/babyshower.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,19 +44,22 @@ import { FootballcakesComponent } from './sportscakes/footballcakes/footballcake
     SignupComponent,
     BirthdaycakesComponent,
     SportscakesComponent,
+    OurcakesComponent,
+    SpecialcakesComponent,
     GymcakesComponent,
-    FootballcakesComponent
+    FootballcakesComponent,
+    BabyshowerComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
-    MatIconModule,
     MatListModule,
     MatCardModule,
     MatFormFieldModule,
