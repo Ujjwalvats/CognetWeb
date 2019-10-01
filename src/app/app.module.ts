@@ -28,6 +28,7 @@ import { SpecialcakesComponent } from './specialcakes/specialcakes.component';
 import { GymcakesComponent } from './sportscakes/gymcakes/gymcakes.component';
 import { FootballcakesComponent } from './sportscakes/footballcakes/footballcakes.component';
 import {BabyshowerComponent } from './ourcakes/babyshower/babyshower.component';
+import { CakeformComponent } from './cakeform/cakeform.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -48,7 +49,8 @@ import { HttpClientModule } from '@angular/common/http';
     SpecialcakesComponent,
     GymcakesComponent,
     FootballcakesComponent,
-    BabyshowerComponent
+    BabyshowerComponent,
+    CakeformComponent
   ],
   imports: [
     BrowserModule,

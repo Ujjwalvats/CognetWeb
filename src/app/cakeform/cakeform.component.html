@@ -1,0 +1,104 @@
+<mat-card class="abc">
+    <form class="border border-light p-5">
+
+        <p class="h4 mb-4">Cake Description Form
+        </p>
+        <hr>
+        <div class="form-group">
+            <div class="row" style="margin-top: 5%;">
+                <label for="textInput">Select your type of cake.</label>
+                <select class="form-control browser-default custom-select mb-8" name="caketype"
+                    [(ngModel)]="selectedValue1" id="select">
+                    <option value="" disabled="" selected="">Select Type</option>
+                    <option value="1">Type 1</option>
+                    <option value="2">Type 2</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row" style="margin-top: 5%;">
+                <label for="textInput">How many people do you need to serve? What size cake do you need?</label>
+                <select class="browser-default custom-select mb-8" id="select" name="people"
+                    [(ngModel)]="selectedValue2">
+                    <option value="" disabled="" selected="">Select Size</option>
+                    <option value="1">8'' x 12'' 80 - 120 Portion* £220</option>
+                    <option value="2">Birthday Cakes</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" *ngIf="selectedValue2 == '1'">
+            <div class="row" style="margin-top: 5%;">
+                <label for="textInput">Do you want vanilla or chocolate sponge</label>
+                <select class="browser-default custom-select mb-8" id="select" name="chospon"
+                    [(ngModel)]="selectedValue3">
+                    <option value="" disabled="" selected="">Select Sponge</option>
+                    <option value="1">Vanilla</option>
+                    <option value="2">Chocolate</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" *ngIf="selectedValue3 == '1'">
+            <div class="row" style="margin-top: 5%;">
+                <label for="textInput">Do you want vanilla or chocolate cream?</label>
+                <select class="browser-default custom-select mb-8" id="select" name="vancho"
+                    [(ngModel)]="selectedValue4">
+                    <option value="" disabled="" selected="">Select Cream</option>
+                    <option value="1">Vanilla</option>
+                    <option value="2">Chocolate</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" *ngIf="selectedValue4 == '1'">
+            <div class="row" style="margin-top: 5%;">
+                <label for="textInput">Do you want your cakes to contain eggs?</label>
+                <select class="browser-default custom-select mb-8" id="select" name="egg" [(ngModel)]="selectedValue5">
+                    <option value="" disabled="" selected="">Select Egg/Eggless</option>
+                    <option value="1">Egg</option>
+                    <option value="2">Eggless</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" *ngIf="selectedValue5 == '1'">
+            <div class="row" style="margin-top: 5%;">
+                <label for="textInput">What decoration would you like around a cake?</label>
+                <select class="browser-default custom-select mb-8" id="select" name="deco" [(ngModel)]="selectedValue6">
+                    <option value="" disabled="" selected="">Select Decoration</option>
+                    <option value="2">Ribbon</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" *ngIf="selectedValue6 == '1' || selectedValue6 == '2' ">
+            <div class="row" style="margin-top: 5%;">
+                <label for="textInput">Would you like to add a message onto the cake?</label>
+                <p>Type the message : <input type="text"></p>
+            </div>
+
+            <div class="form-group" *ngIf="selectedValue5 == '1'">
+                <div class="row" style="margin-top: 5%;">
+                    <label for="textInput">What colour writing do you want?</label>
+                    <select class="browser-default custom-select mb-8" id="select" [(ngModel)]="clr">
+                        <option value="" disabled="" selected="">Select Writing color</option>
+                        <option value="1">Bule</option>
+                        <option value="2">Red</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <br> <br>
+
+
+        <button class="btn btn-info btn-block" type="submit"
+            style="margin-top: 5%;width:25%;margin:auto;">Submit</button>
+    </form>
+
+
+
+</mat-card>
