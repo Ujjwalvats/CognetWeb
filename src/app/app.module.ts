@@ -27,9 +27,18 @@ import { OurcakesComponent } from './ourcakes/ourcakes.component';
 import { SpecialcakesComponent } from './specialcakes/specialcakes.component';
 import { GymcakesComponent } from './sportscakes/gymcakes/gymcakes.component';
 import { FootballcakesComponent } from './sportscakes/footballcakes/footballcakes.component';
-import {BabyshowerComponent } from './ourcakes/babyshower/babyshower.component';
-import { CakeformComponent } from './cakeform/cakeform.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AllcakesComponent } from './specialcakes/all_sports/all_sports.component';
+import { BabyshowerComponent } from './ourcakes/baby_shower/baby_shower.component';
+import { SuperheroescakesComponent } from './birthdaycakes/superheroes/super.component';
+import { CakeformComponent } from './cakeform/cakeform.component';
+
+
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireAuthModule} from 'angularfire2/auth';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -47,10 +56,12 @@ import { HttpClientModule } from '@angular/common/http';
     SportscakesComponent,
     OurcakesComponent,
     SpecialcakesComponent,
+    CakeformComponent,
     GymcakesComponent,
     FootballcakesComponent,
+    AllcakesComponent,
     BabyshowerComponent,
-    CakeformComponent
+    SuperheroescakesComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +76,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    AngularFireModule.initializeApp(environment.firebase),
+      AngularFireAuthModule,
+      AngularFirestoreModule,
+      AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

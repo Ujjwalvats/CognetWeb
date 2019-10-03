@@ -1,104 +1,76 @@
 <mat-card class="abc">
-    <form class="border border-light p-5">
+    <form (ngSubmit)="processForm(SignupForm)" #SignupForm="ngForm" class="border border-light p-5" action="https://formspree.io/kajolkumarisingh222@gmail.com" method="POST" >
+  
+      <p class="h4 mb-4">Cake Description Form
+      </p>
+      <hr>
+      <div class="row" style="margin-top: 5%;">
+          <label for="textInput">How many people do you need to serve? What size cake do you need?</label>
+          <select class="browser-default custom-select mb-8" id="select" name="size">
+            <option value="" disabled="" selected="">Select Size</option>
+            <option value="1">8'' x 12''  80 - 120 Portion*  <strong style="color: red;">£220</strong></option>
+            <option value="2">10'' x 14''	120 - 160 Portion*	<strong style="color:red;">£270</strong></option>
+          </select>
+      </div>
 
-        <p class="h4 mb-4">Cake Description Form
-        </p>
-        <hr>
-        <div class="form-group">
-            <div class="row" style="margin-top: 5%;">
-                <label for="textInput">Select your type of cake.</label>
-                <select class="form-control browser-default custom-select mb-8" name="caketype"
-                    [(ngModel)]="selectedValue1" id="select">
-                    <option value="" disabled="" selected="">Select Type</option>
-                    <option value="1">Type 1</option>
-                    <option value="2">Type 2</option>
-                </select>
-            </div>
-        </div>
+      <div class="row" style="margin-top: 5%;">
+        <label for="textInput">Do you want vanilla or chocolate sponge?</label>
+        <select class="browser-default custom-select mb-8" id="select" name="sponge type">
+          <option value="" disabled="" selected="">Select Sponge</option>
+          <option value="1">	Vanila Sponge Cake</option>
+          <option value="2">Chocolate Sponge Cake<strong style="color:red;">(+ £10)</strong></option>
+        </select>
+    </div>
 
-        <div class="form-group">
-            <div class="row" style="margin-top: 5%;">
-                <label for="textInput">How many people do you need to serve? What size cake do you need?</label>
-                <select class="browser-default custom-select mb-8" id="select" name="people"
-                    [(ngModel)]="selectedValue2">
-                    <option value="" disabled="" selected="">Select Size</option>
-                    <option value="1">8'' x 12'' 80 - 120 Portion* £220</option>
-                    <option value="2">Birthday Cakes</option>
-                </select>
-            </div>
-        </div>
+    <div class="row" style="margin-top: 5%;">
+      <label for="textInput">Do you want vanilla or chocolate Cream?</label>
+      <select class="browser-default custom-select mb-8" id="select" name="cream">
+        <option value="" disabled="" selected="">Select Cream</option>
+        <option value="1">Vanilla Cream</option>
+        <option value="2">Chocolate Cream</option>
+      </select>
+  </div>
 
-        <div class="form-group" *ngIf="selectedValue2 == '1'">
-            <div class="row" style="margin-top: 5%;">
-                <label for="textInput">Do you want vanilla or chocolate sponge</label>
-                <select class="browser-default custom-select mb-8" id="select" name="chospon"
-                    [(ngModel)]="selectedValue3">
-                    <option value="" disabled="" selected="">Select Sponge</option>
-                    <option value="1">Vanilla</option>
-                    <option value="2">Chocolate</option>
-                </select>
-            </div>
-        </div>
+  <div class="row" style="margin-top: 5%;">
+    <label for="textInput">Do you want your cake to contain eggs?</label>
+    <select class="browser-default custom-select mb-8" id="select" name="egg or eggless">
+      <option value="" disabled="" selected="">Select Egg</option>
+      <option value="1"> Eggless</option>
+      <option value="2">With Eggs</option>
+    </select>
+</div>
 
-        <div class="form-group" *ngIf="selectedValue3 == '1'">
-            <div class="row" style="margin-top: 5%;">
-                <label for="textInput">Do you want vanilla or chocolate cream?</label>
-                <select class="browser-default custom-select mb-8" id="select" name="vancho"
-                    [(ngModel)]="selectedValue4">
-                    <option value="" disabled="" selected="">Select Cream</option>
-                    <option value="1">Vanilla</option>
-                    <option value="2">Chocolate</option>
-                </select>
-            </div>
-        </div>
+<div class="row" style="margin-top: 5%;">
+  <label for="textInput">What filling do you want inside your cake?</label>
+  <select class="browser-default custom-select mb-8" id="select" name="cake filler">
+    <option value="" disabled="" selected="">Select Cake Filler</option>
+    <option value="1">Mixed Fruit Jam</option>
+    <option value="2">White Butter Cream</option>
+  </select>
+</div>
 
-        <div class="form-group" *ngIf="selectedValue4 == '1'">
-            <div class="row" style="margin-top: 5%;">
-                <label for="textInput">Do you want your cakes to contain eggs?</label>
-                <select class="browser-default custom-select mb-8" id="select" name="egg" [(ngModel)]="selectedValue5">
-                    <option value="" disabled="" selected="">Select Egg/Eggless</option>
-                    <option value="1">Egg</option>
-                    <option value="2">Eggless</option>
-                </select>
-            </div>
-        </div>
+<div class="row" style="margin-top: 5%;">
+  <label for="textInput">Would you like to add a message onto the cake?</label>
+  <h6>If you do not want a message, please leave below box empty. We will decorate the cake with your chosen toppings (No Extra Charge).
+    The message on the cake will be written in the same colour as the colour of the ribbon chosen above.</h6>
+    Type the message: 
+    <input type="text" style="width:800px;border:1px solid black;" name="message">
+</div> 
 
-        <div class="form-group" *ngIf="selectedValue5 == '1'">
-            <div class="row" style="margin-top: 5%;">
-                <label for="textInput">What decoration would you like around a cake?</label>
-                <select class="browser-default custom-select mb-8" id="select" name="deco" [(ngModel)]="selectedValue6">
-                    <option value="" disabled="" selected="">Select Decoration</option>
-                    <option value="2">Ribbon</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="form-group" *ngIf="selectedValue6 == '1' || selectedValue6 == '2' ">
-            <div class="row" style="margin-top: 5%;">
-                <label for="textInput">Would you like to add a message onto the cake?</label>
-                <p>Type the message : <input type="text"></p>
-            </div>
-
-            <div class="form-group" *ngIf="selectedValue5 == '1'">
-                <div class="row" style="margin-top: 5%;">
-                    <label for="textInput">What colour writing do you want?</label>
-                    <select class="browser-default custom-select mb-8" id="select" [(ngModel)]="clr">
-                        <option value="" disabled="" selected="">Select Writing color</option>
-                        <option value="1">Bule</option>
-                        <option value="2">Red</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-
-        <br> <br>
-
-
-        <button class="btn btn-info btn-block" type="submit"
-            style="margin-top: 5%;width:25%;margin:auto;">Submit</button>
+<div class="row" style="margin-top: 5%;">
+    <label for="textInput">What colour writing do you want?</label>
+    <select class="browser-default custom-select mb-8" id="select" name="message color">
+      <option value="" disabled="" selected="">Select Colour</option>
+      <option value="1">Blue</option>
+      <option value="2">Brown</option>
+      <option value="3">Gold</option>
+      <option value="4">Light Green</option>
+      <option value="5">Green</option>
+    </select>
+  </div>
+  
+<br> <br>
+<!-- <input type="submit" value="Send"> -->
+      <button mat-raised-button color="primary" class="btn btn-info btn-block" type="submit" style="margin-top: 5%;width:25%;margin:auto;" value="Send">Submit</button>
     </form>
-
-
-
-</mat-card>
+  </mat-card>

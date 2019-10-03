@@ -8,9 +8,9 @@
     /* padding-bottom: 30px; */
 }
 .p2 {
-    padding-left: 60px;
-    padding-top:40px;
+  
     border-radius:20px;
+    margin-top:5%; 
 }
 .p3{
     padding-left:50px;
@@ -54,7 +54,81 @@ hr{
 .cake{
     padding-left:180px;
 }
-.foot{
-    width: 100%;
-    height: 400px;
+
+img.low{
+    width:100%;    }
+@media only screen and (max-width: 600px) {
+    img.low{
+width:100%;    }
 }
+
+
+@media only screen and (max-width: 1024px) {
+    img.p2{
+width:20%;
+}
+
+div.col-md-3 {
+    padding: 0;
+}
+
+.bestsell{
+width: 85%;
+}
+
+.pic2{
+    width:80%;
+}
+img.p2{
+    height: 80%!important;
+    width: 100%!important;
+    margin-left: 30%;
+}
+
+
+}
+
+@media only screen and (max-width: 768px) {
+
+.bestsell{
+    width: 75%;
+    }
+
+    img.p3{
+padding: 5px;   
+    }
+
+}
+
+
+@media only screen and (max-width: 375px) {
+img.p2{
+    height: 80%!important;
+    width: 80%!important;
+    margin-left: 20%;
+}
+
+}
+
+
+@media only screen and (max-width: 414px) {
+    img.p2{
+        height: 80%!important;
+        width: 80%!important;
+    }
+
+    img.p3{
+        padding: 5px;
+        
+        width: 40%!important;
+            }
+    
+    }
+
+    @media only screen and (max-width: 320px) {
+        img.p2{
+            height: 80%!important;
+            width: 80%!important;
+        }
+        
+        }

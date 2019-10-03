@@ -41,3 +41,18 @@ hr{
 .bot i{
   font-size: 25px;
 }
+
+@media only screen and (max-width: 600px) {
+  span.right{
+    font-size: 10px;
+  }
+
+
+  a.num{
+    padding: 3px;
+  }
+
+  .bot{
+    padding-right: 12px;
+  }
+}
